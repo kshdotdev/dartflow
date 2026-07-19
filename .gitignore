@@ -1,0 +1,18 @@
+# Dart / Flutter
+.dart_tool/
+.packages
+build/
+pubspec.lock
+.flutter-plugins
+.flutter-plugins-dependencies
+*.iml
+.idea/
+
+# fvm
+.fvm/
+
+# Coverage
+coverage/
+
+# Stray tool caches
+.npm-cache/
