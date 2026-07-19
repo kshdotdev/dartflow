@@ -2,7 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:dart_flow/dart_flow.dart';
+import 'package:node_flow/node_flow.dart';
 
 const _outPort = FlowPort(
   id: 'out',
@@ -38,7 +38,7 @@ Future<Offset> pumpConnect(
           child: SizedBox(
             width: 800,
             height: 600,
-            child: DartFlow<String, String>(
+            child: NodeFlow<String, String>(
               controller: controller,
               fitViewOnLoad: false,
               animateEdges: false,
@@ -56,7 +56,7 @@ Future<Offset> pumpConnect(
     ),
   );
   await tester.pumpAndSettle();
-  return tester.getTopLeft(find.byType(DartFlow<String, String>));
+  return tester.getTopLeft(find.byType(NodeFlow<String, String>));
 }
 
 void main() {

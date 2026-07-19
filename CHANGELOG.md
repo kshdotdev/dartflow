@@ -4,7 +4,7 @@
 
 Initial release.
 
-- `DartFlow<T, E>` canvas widget: infinite pan/zoom viewport, dotted background
+- `NodeFlow<T, E>` canvas widget: infinite pan/zoom viewport, dotted background
   grid, app-defined node visuals via `nodeBuilder`.
 - `FlowController<T, E>`: nodes, edges, selection, marquee, viewport operations
   (`fitView`, `zoomTo`, `centerOnNode`), and callback seams for app-owned

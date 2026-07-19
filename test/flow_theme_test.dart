@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:dart_flow/dart_flow.dart';
+import 'package:node_flow/node_flow.dart';
 
 void main() {
   group('FlowTheme.copyWith', () {
@@ -72,7 +72,7 @@ void main() {
   });
 
   testWidgets(
-    'DartFlow with theme:null resolves its background from the ThemeData '
+    'NodeFlow with theme:null resolves its background from the ThemeData '
     'extension',
     (tester) async {
       const overriddenBackground = Color(0xFF00FF88);
@@ -91,7 +91,7 @@ void main() {
               width: 400,
               height: 300,
               // theme omitted -> resolves from the ambient Theme above.
-              child: DartFlow<String, String>(
+              child: NodeFlow<String, String>(
                 controller: controller,
                 fitViewOnLoad: false,
                 minimap: false,

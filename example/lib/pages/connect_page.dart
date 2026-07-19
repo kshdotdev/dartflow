@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:dart_flow/dart_flow.dart';
+import 'package:node_flow/node_flow.dart';
 
 import '../demo_node.dart';
 
@@ -116,7 +116,7 @@ class _ConnectPageState extends State<ConnectPage> {
         ),
         body: Stack(
           children: <Widget>[
-            DartFlow<DemoNode, Object?>(
+            NodeFlow<DemoNode, Object?>(
               controller: _controller,
               onConnect: _onConnect,
               onPortHover: (anchor) => _hovered.value = anchor,

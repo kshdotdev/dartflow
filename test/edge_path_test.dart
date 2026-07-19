@@ -1,7 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:dart_flow/dart_flow.dart';
+import 'package:node_flow/node_flow.dart';
 
 // Verifies the ported edge-path math: React-Flow bezier control points, the
 // rounded-orthogonal smoothstep shape, and segment hit-rect coverage.

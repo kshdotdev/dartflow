@@ -1,6 +1,6 @@
-# DartFlow
+# NodeFlow
 
-[![pub package](https://img.shields.io/pub/v/dart_flow.svg)](https://pub.dev/packages/dart_flow)
+[![pub package](https://img.shields.io/pub/v/node_flow.svg)](https://pub.dev/packages/node_flow)
 [![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 A [React Flow](https://reactflow.dev)-style node editor canvas for Flutter.
@@ -37,13 +37,13 @@ callbacks (`onMoveCommitted`, `onDeleted`, `onEdgesDeleted`).
 
 ```yaml
 dependencies:
-  dart_flow: ^0.1.0
+  node_flow: ^0.1.0
 ```
 
 ## Usage
 
 ```dart
-import 'package:dart_flow/dart_flow.dart';
+import 'package:node_flow/node_flow.dart';
 import 'package:flutter/material.dart';
 
 final controller = FlowController<String, void>();
@@ -81,7 +81,7 @@ class EditorScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DartFlow<String, void>(
+    return NodeFlow<String, void>(
       controller: controller,
       nodeBuilder: (context, node) => SizedBox(
         width: 200,
@@ -114,7 +114,7 @@ Resolution order: explicit widget parameter → `ThemeExtension` → dark defaul
 
 ```dart
 // 1. Explicit:
-DartFlow(controller: controller, nodeBuilder: ..., theme: myFlowTheme);
+NodeFlow(controller: controller, nodeBuilder: ..., theme: myFlowTheme);
 
 // 2. Via your app ThemeData:
 MaterialApp(

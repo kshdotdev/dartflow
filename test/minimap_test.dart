@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:dart_flow/dart_flow.dart';
+import 'package:node_flow/node_flow.dart';
 
 FlowNode<String> node(String id, double x, double y, {Size? size}) => FlowNode(
   id: id,
@@ -126,7 +126,7 @@ void main() {
           body: SizedBox(
             width: 800,
             height: 600,
-            child: DartFlow<String, String>(
+            child: NodeFlow<String, String>(
               controller: c,
               fitViewOnLoad: false,
               animateEdges: false,
@@ -160,7 +160,7 @@ void main() {
             body: SizedBox(
               width: 800,
               height: 600,
-              child: DartFlow<String, String>(
+              child: NodeFlow<String, String>(
                 controller: c,
                 fitViewOnLoad: false,
                 animateEdges: false,
@@ -176,7 +176,7 @@ void main() {
 
       final map = tester.getBottomRight(find.byType(Minimap<String, String>));
       final canvas = tester.getBottomRight(
-        find.byType(DartFlow<String, String>),
+        find.byType(NodeFlow<String, String>),
       );
       expect(canvas.dx - map.dx, 16);
       expect(canvas.dy - map.dy, 80);

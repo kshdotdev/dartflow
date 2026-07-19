@@ -5,15 +5,15 @@ import 'pages/edges_page.dart';
 import 'pages/editing_page.dart';
 import 'pages/static_page.dart';
 
-void main() => runApp(const DartFlowExampleApp());
+void main() => runApp(const NodeFlowExampleApp());
 
-class DartFlowExampleApp extends StatelessWidget {
-  const DartFlowExampleApp({super.key});
+class NodeFlowExampleApp extends StatelessWidget {
+  const NodeFlowExampleApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'dart_flow examples',
+      title: 'node_flow examples',
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(
         useMaterial3: true,
@@ -29,7 +29,7 @@ class _HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('dart_flow')),
+      appBar: AppBar(title: const Text('node_flow')),
       body: ListView(
         children: <Widget>[
           ListTile(

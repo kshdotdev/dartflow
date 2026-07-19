@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:dart_flow/dart_flow.dart';
+import 'package:node_flow/node_flow.dart';
 
 import '../demo_node.dart';
 
@@ -168,7 +168,7 @@ class _EdgesPageState extends State<EdgesPage> {
             },
             child: Focus(
               autofocus: true,
-              child: DartFlow<DemoNode, Object?>(
+              child: NodeFlow<DemoNode, Object?>(
                 controller: _controller,
                 minimap: true,
                 nodeBuilder: (context, node) => DemoNodeCard(node: node),

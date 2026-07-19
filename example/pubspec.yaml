@@ -1,5 +1,5 @@
-name: dart_flow_example
-description: Runnable demo for the dart_flow canvas package.
+name: node_flow_example
+description: Runnable demo for the node_flow canvas package.
 publish_to: none
 version: 0.1.0
 
@@ -10,7 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  dart_flow:
+  node_flow:
     path: ../
 
 dev_dependencies:

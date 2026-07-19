@@ -12,7 +12,7 @@ import '../models/flow_viewport.dart';
 import 'alignment_snap.dart';
 import 'interaction_state.dart';
 
-/// The state and behavior hub for a [DartFlow] canvas.
+/// The state and behavior hub for a [NodeFlow] canvas.
 ///
 /// Holds the node/edge graph, the camera ([viewport]), selection, and
 /// interaction mode. Widgets subscribe to the fine-grained [ValueNotifier]s
@@ -83,7 +83,7 @@ class FlowController<T, E> extends ChangeNotifier {
 
   /// Whether node drags detect alignment against other nodes (soft snap +
   /// painted guides). Off by default at the controller level so headless
-  /// controller usage keeps exact deltas; [DartFlow] turns it on via its
+  /// controller usage keeps exact deltas; [NodeFlow] turns it on via its
   /// `snapGuides` parameter.
   bool snapGuidesEnabled = false;
 

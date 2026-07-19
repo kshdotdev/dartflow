@@ -2,8 +2,8 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:dart_flow/src/render/edges_painter.dart';
-import 'package:dart_flow/dart_flow.dart';
+import 'package:node_flow/src/render/edges_painter.dart';
+import 'package:node_flow/node_flow.dart';
 
 FlowNode<String> node(
   String id,
@@ -52,7 +52,7 @@ Future<void> pumpCanvas(
           child: SizedBox(
             width: 800,
             height: 600,
-            child: DartFlow<String, String>(
+            child: NodeFlow<String, String>(
               controller: controller,
               fitViewOnLoad: false,
               animateEdges: false,
@@ -140,7 +140,7 @@ void main() {
     // Source anchor (220,130) -> target anchor (400,130); the wire runs along
     // y = 130. Tap its midpoint in empty space between the two nodes.
     final canvasTopLeft = tester.getTopLeft(
-      find.byType(DartFlow<String, String>),
+      find.byType(NodeFlow<String, String>),
     );
     await tester.tapAt(canvasTopLeft + const Offset(310, 130));
     await tester.pump();
@@ -162,7 +162,7 @@ void main() {
     expect(c.getEdge('e')!.selected.value, isTrue);
 
     final canvasTopLeft = tester.getTopLeft(
-      find.byType(DartFlow<String, String>),
+      find.byType(NodeFlow<String, String>),
     );
     await tester.tapAt(canvasTopLeft + const Offset(310, 300));
     await tester.pump();

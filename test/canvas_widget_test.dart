@@ -3,7 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:dart_flow/dart_flow.dart';
+import 'package:node_flow/node_flow.dart';
 
 FlowNode<String> node(String id, double x, double y, {Size? size}) => FlowNode(
   id: id,
@@ -28,7 +28,7 @@ Future<void> pumpCanvas(
           child: SizedBox(
             width: size.width,
             height: size.height,
-            child: DartFlow<String, String>(
+            child: NodeFlow<String, String>(
               controller: controller,
               fitViewOnLoad: false,
               minimap: false,
@@ -59,7 +59,7 @@ void main() {
     await pumpCanvas(tester, c);
 
     final canvasTopLeft = tester.getTopLeft(
-      find.byType(DartFlow<String, String>),
+      find.byType(NodeFlow<String, String>),
     );
     final cardTopLeft = tester.getTopLeft(find.byKey(const ValueKey('card-a')));
 
@@ -141,7 +141,7 @@ void main() {
 
     // Tap far from any node.
     await tester.tapAt(
-      tester.getCenter(find.byType(DartFlow<String, String>)) +
+      tester.getCenter(find.byType(NodeFlow<String, String>)) +
           const Offset(250, 200),
     );
     await tester.pump();

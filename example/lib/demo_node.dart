@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:dart_flow/dart_flow.dart';
+import 'package:node_flow/node_flow.dart';
 
 /// Payload for the demo nodes: a title and an accent color.
 class DemoNode {

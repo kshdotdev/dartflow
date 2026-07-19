@@ -1,6 +1,6 @@
-# dart_flow example
+# node_flow example
 
-A runnable demo of the [dart_flow](https://pub.dev/packages/dart_flow) canvas
+A runnable demo of the [node_flow](https://pub.dev/packages/node_flow) canvas
 with four pages:
 
 - **01 · Static camera** — a read-only graph with pan / zoom / fit.

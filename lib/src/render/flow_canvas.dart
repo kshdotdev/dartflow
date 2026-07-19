@@ -28,8 +28,8 @@ import 'unbounded.dart';
 /// Node visuals are entirely app-defined through [nodeBuilder]; the canvas owns
 /// camera (pan/zoom), the dotted grid, node positioning, selection, drag,
 /// marquee, edges, and drag-to-connect. State lives on [controller].
-class DartFlow<T, E> extends StatefulWidget {
-  const DartFlow({
+class NodeFlow<T, E> extends StatefulWidget {
+  const NodeFlow({
     super.key,
     required this.controller,
     required this.nodeBuilder,
@@ -90,10 +90,10 @@ class DartFlow<T, E> extends StatefulWidget {
   final void Function(FlowPortAnchor? anchor)? onPortHover;
 
   @override
-  State<DartFlow<T, E>> createState() => _DartFlowState<T, E>();
+  State<NodeFlow<T, E>> createState() => _NodeFlowState<T, E>();
 }
 
-class _DartFlowState<T, E> extends State<DartFlow<T, E>>
+class _NodeFlowState<T, E> extends State<NodeFlow<T, E>>
     with SingleTickerProviderStateMixin {
   late final TransformationController _transformationController;
   late final AnimationController _dashController;
@@ -113,7 +113,7 @@ class _DartFlowState<T, E> extends State<DartFlow<T, E>>
 
   FlowController<T, E> get _controller => widget.controller;
 
-  /// The theme resolved from the ambient [Theme] when [DartFlow.theme]
+  /// The theme resolved from the ambient [Theme] when [NodeFlow.theme]
   /// is null. Recomputed in [didChangeDependencies] so theme changes re-resolve
   /// without touching the paint path.
   FlowTheme? _resolvedTheme;
@@ -157,7 +157,7 @@ class _DartFlowState<T, E> extends State<DartFlow<T, E>>
   }
 
   @override
-  void didUpdateWidget(covariant DartFlow<T, E> oldWidget) {
+  void didUpdateWidget(covariant NodeFlow<T, E> oldWidget) {
     super.didUpdateWidget(oldWidget);
     if (oldWidget.animateEdges != widget.animateEdges) _syncDashAnimation();
     _controller.snapGuidesEnabled = widget.snapGuides;

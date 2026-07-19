@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:dart_flow/dart_flow.dart';
+import 'package:node_flow/node_flow.dart';
 
 void main() {
   testWidgets('measuredSize reflects an intrinsic-height child after layout', (
@@ -25,7 +25,7 @@ void main() {
           body: SizedBox(
             width: 800,
             height: 600,
-            child: DartFlow<String, String>(
+            child: NodeFlow<String, String>(
               controller: c,
               fitViewOnLoad: false,
               minimap: false,
