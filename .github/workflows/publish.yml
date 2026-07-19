@@ -1,0 +1,24 @@
+name: Publish to pub.dev
+
+on:
+  push:
+    tags:
+      - "v[0-9]+.[0-9]+.[0-9]+*"
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write # required for OIDC authentication with pub.dev
+    steps:
+      - uses: actions/checkout@v4
+      # setup-dart exchanges the GitHub OIDC token for a temporary pub.dev
+      # credential; the Flutter SDK below is what actually builds and publishes.
+      - uses: dart-lang/setup-dart@v1
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+      - run: flutter pub get
+      - run: flutter test
+      - run: flutter pub publish --force
