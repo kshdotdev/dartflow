@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.1
+
+- No functional changes. Infrastructure release: CI and automated publishing
+  from GitHub Actions.
+
 ## 0.1.0
 
 Initial release.
